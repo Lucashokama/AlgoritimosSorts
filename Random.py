@@ -132,43 +132,17 @@ def measure_time(input_list,sorting_function):
 
 
 if __name__ == "__main__":
-    print("Heapsort")
     for x in range(1000, 21000, 1000):
         lista = generate_random_list(x,1,20000)
         tempo = measure_time(lista,heap_sort)
-        print(x,tempo, "seconds")
-        
-    print()   
-    print("Quicksort")
-    for x in range(1000, 21000, 1000):
-        lista = generate_random_list(x, 1, 20000)
+        print("Heapsort",x,tempo, "seconds")
         tempo = measure_time(lista, quick_sort)
-        print(x, tempo, "seconds")
-        
-    print()
-    print("Mergesort")
-    for x in range(1000, 21000, 1000):
-        lista = generate_random_list(x, 1, 20000)
-        tempo = measure_time(lista, merge_sort)
-        print(x, tempo, "seconds")
-
-    print()
-    print("Selectionsort")
-    for x in range(1000, 21000, 1000):
-        lista = generate_random_list(x, 1, 20000)
-        tempo = measure_time(lista, selection_sort)
-        print(x, tempo, "seconds")
-        
-    print()
-    print("Countingsort")
-    for x in range(1000, 21000, 1000):
-        lista = generate_random_list(x, 1, 20000)
-        tempo = measure_time(lista, counting_sort)
-        print(x, tempo, "seconds")
-    
-    print()
-    print("Insertionsort")
-    for x in range(1000, 21000, 1000):
-        lista = generate_random_list(x, 1, 20000)
-        tempo = measure_time(lista, insertion_sort)
-        print(x, tempo, "seconds")
+        print("Quicksort",x, tempo, "seconds")
+        tempo = measure_time(lista, quick_sort)
+        print("Mergesort",x, tempo, "seconds")
+        tempo = measure_time(lista, quick_sort)
+        print("Selectiont",x, tempo, "seconds")
+        tempo = measure_time(lista, quick_sort)
+        print("Coutingosrt",x, tempo, "seconds")
+        tempo = measure_time(lista, quick_sort)
+        print("Insertionsort",x, tempo, "seconds")
